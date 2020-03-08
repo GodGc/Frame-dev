@@ -1,0 +1,550 @@
+@import '~@styles/common';
+
+$nightBG: #2C2C2C;
+$nightBG02: #222222;
+$nightFont: #959595;
+$nightFont02: #5A5D63;
+
+.main-wrap{
+  height: 100vh;
+  font-size: rem(16);
+  background-color: #F5F5F5;
+  padding-top: rem(10);
+  button{
+    border: none;
+    outline: none;
+  }
+  .check-wrap{
+    width: rem(345);
+    height: rem(186.5);
+    margin: 0 auto;
+    padding: rem(15);
+    background: #FFFFFF;
+    box-shadow: 0 rem(8) rem(12) 0 rgba(0,0,0,0.01);
+    border-radius: rem(9);
+    .title{
+      font-size: rem(16);
+      color: #191C22;
+      position: relative;
+      &:before{
+        display: inline-block;
+        width: rem(2);
+        height: rem(14);
+        content: '';
+        background-color: #C01E2F;
+        position: absolute;
+        top: rem(5);
+        left: rem(-15);
+      }
+    }
+    .check-progress{
+      width: 100%;
+      height: rem(100);
+      font-size: rem(12);
+      
+      .progress{
+        padding-top: rem(45);
+        width: 100%;
+        height: rem(70);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .bar{
+          width: rem(285);
+          height: rem(5);
+          border-radius: rem(10);
+          background-color: #ECECEC;
+          position: relative;
+          // overflow: hidden;
+          .point{
+            width: rem(5);
+            height: rem(5);
+            border-radius: 50%;
+            background: #D8D8D8;
+            z-index: 99;
+            position: absolute;
+            // top: 50%;
+            top: 0;
+            left: 33.33%;
+            // margin-top: rem(-1);
+          }
+          .point:nth-child(2){
+            left: 66.66%;
+          }
+          .bar-pro{
+            width: 10%;
+            height: rem(5);
+            background:#C01E2F;
+            border-radius: rem(10);
+            position: relative;
+            .days-img{
+              color: #fff;
+              position: absolute;
+              top: rem(-35);
+              right: rem(-18);
+              width: rem(39);
+              height: rem(23);
+              text-align: center;
+              background: url(http://w1.hoopchina.com.cn/rename/days.png) center no-repeat;
+              background-size: contain;
+            }
+            .active-state{
+              right: rem(-40);
+            }
+          }
+        }
+        img{
+          width: rem(20);
+          height: rem(20);
+        }
+      }
+      .days-num{
+        width: 3.8rem;
+        display: flex;
+        justify-content: space-between;
+        font-family: PingFangSC-Regular;
+        color: #BDBEC2;
+        position: relative;
+        span:nth-child(2){
+          position: absolute;
+          left: 31%;
+        }
+        span:nth-child(3){
+          position: absolute;
+          left: 64%;
+        }
+        span:nth-child(4){
+          position: absolute;
+          left: 102%;
+          width: rem(30);
+        }
+      }
+      .done{
+        color: #191C22;
+      }
+    }
+    .note{
+      width: 100%;
+      height: rem(41);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: rem(14);
+      .checked-day{
+        color: #96999F;
+        font-family: PingFangSC-Regular;
+      }
+      .checked-btn{
+        width: rem(99);
+        height: rem(41);
+        button{
+          font-family: PingFangSC-Semibold;
+          font-size: rem(16);
+          font-weight: 700;
+          width: rem(99);
+          height: rem(41);
+          background: #BDBEC2;
+          border-radius: rem(148);
+          color: #fff;
+          border: none;
+          outline: none;
+        }
+        .active{
+          background: #C01E2F;
+          color: #fff;
+        }
+      }
+    }
+  }
+  .invite-wrap{
+    width: rem(345);
+    height: rem(325.5);
+    margin: rem(12) auto;
+    background: #FFFFFF;
+    border-radius: rem(9);
+    padding: rem(15);
+    .title{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      &:before{
+        display: inline-block;
+        width: rem(2);
+        height: rem(14);
+        content: '';
+        background-color: #C01E2F;
+        position: absolute;
+        top: rem(5);
+        left: rem(-15);
+      }
+      span:last-child{
+        height: rem(22);
+        font-size: rem(12);
+        line-height: rem(22);
+        color: #96999F;
+        font-family: PingFangSC-Regular;
+        position: relative;
+        padding-left: rem(15);
+        img{
+          width: rem(12);
+          height: rem(12);
+          vertical-align: bottom;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+        }
+      }
+    }
+    .rules{
+      width: 100%;
+      height: rem(63);
+      border-radius: rem(3);
+      background-color: #F5F5F5;
+      font-size: rem(12);
+      color: #191C22;
+      display: flex;
+      align-items: center;
+      font-family: PingFangSC-Regular;
+      padding-left: rem(15);
+      margin-top: rem(12);
+      .arr{
+        width: rem(25);
+        text-align: center;
+        font-weight: 700;
+      }
+      .first,
+      .second,
+      .third{
+        display: flex;
+        flex-direction: column;
+        height: rem(63);
+        justify-content: center;
+        font-family: PingFangSC-Regular;
+        span:nth-child(1){
+          width: rem(25);
+          height: rem(14);
+          background-color: #4E5158;
+          border-radius: rem(17);
+          text-align: center;
+          line-height: rem(14);
+          color: #FFFFFF;
+          margin-bottom: rem(4);
+        }
+      }
+    }
+    .state{
+      width: 100%;
+      height: rem(100);
+      margin-top: rem(6);
+      margin-bottom: rem(14);
+      font-size: rem(12);
+      font-family: PingFangSC-Regular;
+      color: #4E5138;
+      .invite, .liked{
+        width: 100%;
+        height: rem(50);
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #EFEFEF;
+        img{
+          width: rem(30);
+          height: rem(30)
+        }
+        .avatar{
+          flex: 1;
+          display: flex;
+          div:not(:first-child){
+            margin-left: rem(-5);
+          }
+          img{
+            border-radius: 50%;
+            // border: rem(1) solid #fff;
+          }
+          div{
+            position: relative;
+            span{
+              display: inline-block;
+              width: rem(20);
+              height: rem(12.4);
+              background-color: #4E5158;
+              border-radius: rem(9);
+              font-size: rem(9);
+              color: #fff;
+              text-align: center;
+              line-height: rem(12.4);
+              position: absolute;
+              left: 50%;
+              bottom: rem(-3);
+              transform: translateX(-50%);
+            }
+          }
+        }
+        .txt{
+          flex: 1;
+          text-align: right;
+          line-height: rem(50);
+        }
+        .done-state{
+          flex: 1;
+          text-align: right;
+          font-family: PingFangSC-Regular;
+          font-size: rem(15);
+          color: #191C22;
+          img{
+            width: rem(17.5);
+            height: rem(11.5);
+          }
+        }
+        
+      }
+    }
+    .invite-friend{
+      button{
+        background: #C01E2F;
+        border-radius: rem(148);
+        width: 100%;
+        height: rem(41);
+        color: #fff;
+        font-size: rem(16);
+        font-family: PingFangSC-Semibold;
+        margin-bottom: rem(12);
+      }
+      .dis{
+        color: #BDBEC2;
+        background: #E5E5E5;
+      }
+      div{
+        text-align: center;
+        font-family: PingFangSC-Regular;
+        font-size: rem(12);
+        color: #4E5158;
+        img{
+          margin-left: rem(2);
+          vertical-align: text-top;
+          width: rem(14);
+          height: rem(14)
+        }
+        span{
+          font-weight: 700;
+          color: #000;
+        }
+        &:last-child{
+          color: #96999F;
+          font-size: rem(11);
+          font-family: PingFangSC-Regular;
+        }
+      }
+      .copyState{
+        display: block;
+        padding: rem(10);
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%,-50%);
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: rem(6);
+      }
+    }
+  }
+  .rename-state{
+    width: rem(345);
+    height: rem(42);
+    margin: rem(12.5) auto;
+    background: #FFFFFF;
+    box-shadow: 0 rem(5) rem(10) 0 rgba(0,0,0,0.05);
+    border-radius: rem(9);
+    padding: rem(15);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: PingFangSC-Regular;
+    color: #191C22;
+    img{
+      height: rem(20);
+      vertical-align: sub;
+      margin-right: rem(8);
+    }
+    button{
+      width: rem(60);
+      height: rem(26);
+      border-radius: rem(28);
+      border: none;
+      outline: none;
+      font-size: rem(14);
+      color: #BDBEC2;
+      background: #DDDDDD;
+    }
+    .disactive{
+      width: rem(60);
+      height: rem(26);
+      border-radius: rem(28);
+      border: none;
+      outline: none;
+      font-size: rem(14);
+      color: #BDBEC2;
+      background: #DDDDDD;
+    }
+    .active{
+      color: #191C22;
+    }
+  }
+  .cover{
+    background: rgba(0,0,0,0.45);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-size: rem(13);
+    z-index: 9999;
+    .content{
+      width: rem(290);
+      max-height: rem(550);
+      overflow: scroll;
+      padding: rem(15);
+      background-color: #fff;
+      border-radius: rem(7);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      position: relative;
+      .rules-title{
+        margin-bottom: rem(19);
+        span{
+          color: #96999F;
+          position: absolute;
+          top: rem(6);
+          right: rem(6);
+          width: rem(17);
+          height: rem(17);
+        }
+      }
+      .rules-content{
+        font-family: PingFangSC-Regular;
+        text-align: left;
+        span{
+          font-family: PingFangSC-Semibold;
+          color: #191C22;
+        }
+      }
+    }
+  }
+}
+
+.night{
+  background-color: $nightBG02;
+  color: $nightFont;
+  .check-wrap{
+    background-color: $nightBG;
+    .title{
+      color: $nightFont;
+    }
+    .check-progress{
+      .progress{
+        .bar{
+          .point{
+            background-color: $nightBG;
+          }
+          .bar-pro{
+            background-color: #99222C;
+            .days-img{
+              color: $nightFont;
+            }
+          }
+          background-color: $nightBG02;
+        }
+      }
+      .days-num{
+        color: $nightFont02;
+        .done{
+          color: $nightFont;
+        }
+      }
+    }
+
+    .note{
+      .checked-day{
+        color: $nightFont02;
+      }
+      .checked-btn{
+        button{
+          background-color: #47484B;
+          color: $nightFont02;
+        }
+        .active{
+          background: #99222C;
+          color: #959595;
+        }
+      }
+    }
+  }
+  .invite-wrap{
+    background-color: $nightBG;
+    .title{
+      span:last-child{
+        color: $nightFont02;
+      }
+    }
+    .rules{
+      background-color: $nightBG02;
+      color: $nightFont;
+      .first,.second,.third{
+        span:nth-child(1){
+          color: $nightFont;
+        }
+      }
+    }
+    .state{
+      color: $nightFont02;
+      .invite{
+        .done-state{
+          color: $nightFont;
+        }
+      }
+      .liked, .invite{
+        border-bottom: rem(1) solid #1F1F1F;
+      }
+      .liked{
+        .done-state{
+          color: $nightFont;
+        }
+      }
+    }
+    .invite-friend{
+      div:nth-child(2){
+        color: $nightFont;
+        span{
+          color: $nightFont;
+        }
+      }
+      .dis{
+        background: #47484B;
+        color: #5A5D63;
+      }
+      div:nth-child(3){
+        color: $nightFont02;
+      }
+      button{
+        background-color: #99222C;
+        color: $nightFont;
+      }
+      
+    }
+    
+  }
+  .rename-state{
+    background-color: $nightBG;
+    div{
+      color: $nightFont;
+    }
+    button{
+      background-color: #47484B;
+      color: $nightFont02;
+    }
+  }
+}

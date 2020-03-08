@@ -1,0 +1,7 @@
+/build
+node_modules
+/.vscode
+
+# system ignore
+.DS_Store
+Thumbs.db
